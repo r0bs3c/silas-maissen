@@ -1,0 +1,16 @@
+# CNAME Datei für GitHub Pages Custom Domain
+# 
+# ANLEITUNG:
+# 1. Ersetzen Sie "silas-handwerk.com" mit Ihrer eigenen Domain
+# 2. Lassen Sie diese Datei leer, wenn Sie KEINE Custom Domain verwenden möchten
+# 3. Speichern und pushen Sie zu GitHub
+# 4. Konfigurieren Sie die DNS-Einstellungen bei Ihrem Domain-Anbieter:
+#    - CNAME Record: www → USERNAME.github.io
+#    - A Record: @ → GitHub Pages IP-Adressen
+#
+# Warten Sie 15-48 Stunden, bis die Änderungen aktiv sind.
+#
+# Beispiel:
+# silas-handwerk.com
+
+silas-handwerk.com

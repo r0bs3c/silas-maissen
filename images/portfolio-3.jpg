@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#b8956a"/>
+  <polygon points="200,20 380,200 400,200 400,300 0,300 0,200 20,200" fill="#8b7355" opacity="0.8"/>
+  <line x1="100" y1="100" x2="300" y2="200" stroke="#d4c5b9" stroke-width="2" opacity="0.5"/>
+  <line x1="150" y1="80" x2="250" y2="220" stroke="#d4c5b9" stroke-width="2" opacity="0.5"/>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold" stroke="#2d4a3e" stroke-width="1">
+    Portfolio-Bild 3
+  </text>
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" stroke="#2d4a3e" stroke-width="0.5">
+    Fassadensanierung
+  </text>
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="10" fill="#2d4a3e" text-anchor="middle">
+    Ersetzen Sie dieses Bild mit: images/portfolio-3.jpg
+  </text>
+</svg>

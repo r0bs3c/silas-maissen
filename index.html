@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BEARBEITEN: Seitentitel und Meta-Beschreibung für SEO -->
+    <title>Silas Maissen – Metallbau & Umgebungsarbeiten in Disentis</title>
+    <meta name="description" content="Professionelle Metallbau-, Garten- und Seilarbeiten in Disentis. Zuverlässig, kompetent und vertrauenswürdig.">
+    
+    <!-- Open Graph für Social Media -->
+    <meta property="og:title" content="Silas Maissen – Metallbau & Umgebungsarbeiten">
+    <meta property="og:description" content="Professionelle Handwerksdienste in Disentis">
+    <meta property="og:image" content="images/silas-portrait.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Datenschutz-Hinweis: Keine Cookies, kein Tracking -->
+    <style>
+        /* ========== CSS RESETS & GRUNDLAGEN ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* BEARBEITEN: Farbpalette */
+            --color-pine: #2d4a3e;
+            --color-slate: #4a5568;
+            --color-beige: #d4c5b9;
+            --color-accent: #b8956a;
+            --color-text: #2d3436;
+            --color-light-bg: #f8f7f6;
+            --color-border: #e8e4e0;
+            
+            /* Typography */
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            --font-size-base: 16px;
+            --line-height: 1.6;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            color: var(--color-text);
+            line-height: var(--line-height);
+            background-color: #fff;
+        }
+        
+        /* ========== NAVIGATION ========== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(45, 74, 62, 0.98);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a:focus {
+            color: var(--color-beige);
+            outline: none;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-beige);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a:focus::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* ========== HERO SECTION ========== */
+        #hero {
+            position: relative;
+            padding-top: 100px;
+            padding-bottom: 60px;
+            background: linear-gradient(180deg, #f8f7f6 0%, #eee9e3 100%);
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 400px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="spikes" x="0" y="0" width="100" height="400" patternUnits="userSpaceOnUse"><polygon points="50,400 30,200 50,0 70,200" fill="%232d4a3e" opacity="0.1"/></pattern></defs><rect width="1200" height="400" fill="%23d4c5b9" opacity="0.3"/><rect width="1200" height="400" fill="url(%23spikes)"/><polygon points="0,400 150,150 300,400" fill="%232d4a3e" opacity="0.15"/><polygon points="300,400 480,120 660,400" fill="%234a5568" opacity="0.12"/><polygon points="700,400 850,160 1000,400" fill="%232d4a3e" opacity="0.1"/><polygon points="1000,400 1200,180 1200,400" fill="%234a5568" opacity="0.08"/></svg>');
+            background-size: cover;
+            background-position: center;
+            transform: translateZ(0);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: var(--color-pine);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero-intro {
+            font-size: 1.1rem;
+            color: var(--color-slate);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-family: var(--font-family);
+        }
+        
+        .btn:focus {
+            outline: 3px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+        
+        .btn-primary {
+            background: var(--color-pine);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-slate);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(45, 74, 62, 0.2);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--color-pine);
+            border: 2px solid var(--color-pine);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-pine);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* ========== LEISTUNGEN (SERVICES) ========== */
+        #leistungen {
+            padding: 80px 2rem;
+            background: white;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--color-pine);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: var(--color-light-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(45, 74, 62, 0.1);
+            border-color: var(--color-accent);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-pine);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--color-pine);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .service-description {
+            color: var(--color-slate);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .service-tasks {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .service-tasks li {
+            padding: 0.5rem 0;
+            color: var(--color-text);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-tasks li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+        
+        .service-card .btn {
+            margin-top: auto;
+        }
+        
+        /* ========== ÜBER SILAS ========== */
+        #uber-silas {
+            padding: 80px 2rem;
+            background: var(--color-light-bg);
+        }
+        
+        .uber-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .uber-text h3 {
+            font-size: 1.4rem;
+            color: var(--color-pine);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .uber-text p {
+            margin-bottom: 1rem;
+            color: var(--color-slate);
+            line-height: 1.8;
+        }
+        
+        .uber-portrait {
+            width: 100%;
+            border-radius: 8px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border: 3px solid var(--color-accent);
+        }
+        
+        /* ========== PORTFOLIO ========== */
+        #portfolio {
+            padding: 80px 2rem;
+            background: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(45, 74, 62, 0.9), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .portfolio-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+        
+        /* ========== KONTAKT (CONTACT FORM) ========== */
+        #kontakt {
+            padding: 80px 2rem;
+            background: var(--color-light-bg);
+        }
+        
+        .kontakt-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-pine);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            color: var(--color-text);
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--color-pine);
+            box-shadow: 0 0 0 3px rgba(45, 74, 62, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .form-error {
+            color: #d32f2f;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+        
+        .form-error.show {
+            display: block;
+        }
+        
+        input.invalid,
+        textarea.invalid {
+            border-color: #d32f2f;
+        }
+        
+        .form-success {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-success.show {
+            display: block;
+        }
+        
+        .contact-alternatives {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+        }
+        
+        .contact-alternatives p {
+            color: var(--color-slate);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* ========== FOOTER & IMPRESSUM ========== */
+        footer {
+            background: var(--color-pine);
+            color: white;
+            padding: 3rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .footer-section p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover,
+        .footer-links a:focus {
+            color: var(--color-beige);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-icon:hover,
+        .social-icon:focus {
+            background: var(--color-beige);
+            color: var(--color-pine);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* ========== LIGHTBOX ========== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .lightbox.show {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 2001;
+            transition: color 0.3s ease;
+        }
+        
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: var(--color-beige);
+        }
+        
+        .lightbox-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 4px;
+            max-width: 500px;
+        }
+        
+        .lightbox-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--color-pine);
+                flex-direction: column;
+                gap: 1rem;
+                padding: 2rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .nav-menu.show {
+                max-height: 500px;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-intro {
+                font-size: 1rem;
+            }
+            
+            .hero-ctas {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .uber-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+            
+            .contact-buttons .btn {
+                width: 100%;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                --font-size-base: 14px;
+            }
+            
+            nav {
+                padding: 0.75rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .service-card,
+            .uber-text h3 {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav aria-label="Hauptnavigation">
+        <a href="#" class="logo">Silas Maissen</a>
+        <button class="hamburger" id="hamburger" aria-label="Navigation umschalten" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu" role="navigation">
+            <li><a href="#hero">Start</a></li>
+            <li><a href="#leistungen">Leistungen</a></li>
+            <li><a href="#uber-silas">Über Silas</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero">
+        <div class="hero-background" id="heroParallax"></div>
+        <div class="hero-content">
+            <h1>
+                <!-- BEARBEITEN: Haupt-Überschrift und SEO-Keywords -->
+                Silas Maissen – Metallbau & Umgebungsarbeiten in Disentis
+            </h1>
+            <p class="hero-intro">
+                <!-- BEARBEITEN: Intro-Text (Kurze Beschreibung des Angebots) -->
+                Ich bin ein erfahrener Handwerker mit Leidenschaft für Qualität und Zuverlässigkeit. 
+                Meine Spezialität: professionelle Metallbau-, Garten- und Seilarbeiten in und um Disentis. 
+                Vertrauen Sie auf Expertise und Hingabe.
+            </p>
+            <div class="hero-ctas">
+                <!-- BEARBEITEN: Telefonnummer -->
+                <a href="tel:+41791234567" class="btn btn-primary">Jetzt anrufen</a>
+                <!-- BEARBEITEN: WhatsApp Link (ohne +, mit Ländercode) -->
+                <a href="https://wa.me/41791234567?text=Hallo%20Silas" class="btn btn-secondary">WhatsApp schreiben</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LEISTUNGEN (SERVICES) ==================== -->
+    <section id="leistungen">
+        <h2 class="section-title">Meine Leistungen</h2>
+        <div class="services-grid">
+            <!-- DIENSTLEISTUNG 1 -->
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Metallbau</h3>
+                <p class="service-description">
+                    <!-- BEARBEITEN: Beschreibung Metallbau -->
+                    Hochwertige Metallkonstruktionen für Privat und Gewerbe. 
+                    Von eleganten Geländern bis zu robusten Stahlkonstruktionen – 
+                    handwerkliche Perfektion in jeder Naht.
+                </p>
+                <ul class="service-tasks">
+                    <!-- BEARBEITEN: Aufzählung typischer Aufgaben -->
+                    <li>Geländer und Treppen</li>
+                    <li>Tore und Gittertüren</li>
+                    <li>Dachziegelbinder und Träger</li>
+                    <li>Moderne Designelemente</li>
+                </ul>
+                <a href="#kontakt" class="btn btn-primary">Anfrage stellen</a>
+            </div>
+
+            <!-- DIENSTLEISTUNG 2 -->
+            <div class="service-card">
+                <div class="service-icon">🌿</div>
+                <h3>Umgebungsarbeiten (Gartenservice)</h3>
+                <p class="service-description">
+                    <!-- BEARBEITEN: Beschreibung Gartenservice -->
+                    Ihr Außenbereich mit professioneller Gartenpflege und Landschaftsgestaltung. 
+                    Saubere Linien, nachhaltige Pflanzkonzepte und zuverlässige Wartung.
+                </p>
+                <ul class="service-tasks">
+                    <!-- BEARBEITEN: Aufzählung typischer Aufgaben -->
+                    <li>Gartenpflanzung und Umgestaltung</li>
+                    <li>Heckenschnitt und Baumpflege</li>
+                    <li>Rasenanlage und Neugestaltung</li>
+                    <li>Steinflächen und Wegbeläge</li>
+                </ul>
+                <a href="#kontakt" class="btn btn-primary">Anfrage stellen</a>
+            </div>
+
+            <!-- DIENSTLEISTUNG 3 -->
+            <div class="service-card">
+                <div class="service-icon">🧗</div>
+                <h3>Arbeiten am hängenden Seil</h3>
+                <p class="service-description">
+                    <!-- BEARBEITEN: Beschreibung Seilarbeiten -->
+                    Sichere und professionelle Arbeiten an schwer zugänglichen Stellen. 
+                    Zertifiziert und versichert für maximale Sicherheit in der Höhe.
+                </p>
+                <ul class="service-tasks">
+                    <!-- BEARBEITEN: Aufzählung typischer Aufgaben -->
+                    <li>Fassadenreinigung und -sanierung</li>
+                    <li>Dacharbeiten in der Höhe</li>
+                    <li>Schwer erreichbare Baumkronen</li>
+                    <li>Sicherungsarbeiten und Inspektionen</li>
+                </ul>
+                <a href="#kontakt" class="btn btn-primary">Anfrage stellen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ÜBER SILAS ==================== -->
+    <section id="uber-silas">
+        <h2 class="section-title">Über Silas</h2>
+        <div class="uber-container">
+            <div class="uber-text">
+                <h3>
+                    <!-- BEARBEITEN: Name -->
+                    Silas Maissen
+                </h3>
+                <p>
+                    <!-- BEARBEITEN: Bio und Hintergrund -->
+                    <strong>Wohnort:</strong> Disentis
+                </p>
+                <p>
+                    <!-- BEARBEITEN: Erfahrung -->
+                    Mit über 15 Jahren Erfahrung im Handwerk verbinde ich traditionelle 
+                    Techniken mit modernem Know-how. Meine Leidenschaft für Qualität und 
+                    Zuverlässigkeit macht jeden Auftrag zu einem Erfolgsprojekt.
+                </p>
+                <p>
+                    <!-- BEARBEITEN: Qualifikationen -->
+                    <strong>Qualifikationen:</strong> Ausbildung in Metallbau und Gartenbau, 
+                    Zertifizierung für Seilarbeiten (SUA Level 3), Versicherung und Sicherheit auf dem aktuellsten Stand.
+                </p>
+                <p>
+                    <!-- BEARBEITEN: Persönliche Note -->
+                    In meiner Freizeit bin ich ein begeisterter Skifahrer – die Berge sind 
+                    meine zweite Heimat. Diese Leidenschaft für die Natur spiegelt sich in 
+                    meinen umweltbewussten Gartenprojekten wider.
+                </p>
+            </div>
+            <!-- BEARBEITEN: Porträt-Bild ersetzen (images/silas-portrait.jpg) -->
+            <img src="images/silas-portrait.jpg" alt="Portrait von Silas Maissen" class="uber-portrait" loading="lazy">
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+            <!-- BEARBEITEN: Portfolio-Einträge hinzufügen/ändern -->
+            <!-- Projekt 1: Vorher/Nachher -->
+            <div class="portfolio-item" onclick="openLightbox('images/portfolio-1.jpg', 'Metallbau-Projekt', 'Elegante Terrassengeländer aus Edelstahl mit modernem Design und LED-Beleuchtung.')">
+                <img src="images/portfolio-1.jpg" alt="Metallbau Terrassengeländer" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Terrassengeländer</h4>
+                    <p>Edelstahl-Design</p>
+                </div>
+            </div>
+
+            <!-- Projekt 2 -->
+            <div class="portfolio-item" onclick="openLightbox('images/portfolio-2.jpg', 'Gartensanierung', 'Komplette Gartenumgestaltung mit neuen Beeten, Wegebau und Bepflanzung.')">
+                <img src="images/portfolio-2.jpg" alt="Gartensanierung" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Gartensanierung</h4>
+                    <p>Landschaftsgestaltung</p>
+                </div>
+            </div>
+
+            <!-- Projekt 3 -->
+            <div class="portfolio-item" onclick="openLightbox('images/portfolio-3.jpg', 'Dachsanierung', 'Seilarbeiten an exponierter Fassade mit Sicherung und Sanierung.')">
+                <img src="images/portfolio-3.jpg" alt="Fassadensanierung" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Fassadensanierung</h4>
+                    <p>Seilarbeiten</p>
+                </div>
+            </div>
+
+            <!-- Projekt 4 -->
+            <div class="portfolio-item" onclick="openLightbox('images/portfolio-4.jpg', 'Torfabrikation', 'Handgefertigte Schmiedetore und Gittertüren mit traditionellen Techniken.')">
+                <img src="images/portfolio-4.jpg" alt="Schmiedetore" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Schmiedetore</h4>
+                    <p>Handwerk & Design</p>
+                </div>
+            </div>
+
+            <!-- Projekt 5 -->
+            <div class="portfolio-item" onclick="openLightbox('images/portfolio-5.jpg', 'Baumkrone-Arbeiten', 'Sichere Seilarbeiten an schwer erreichbaren Baumkronen.')">
+                <img src="images/portfolio-5.jpg" alt="Baumkrone-Arbeiten" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Baumkrone-Arbeiten</h4>
+                    <p>Höhensicherung</p>
+                </div>
+            </div>
+
+            <!-- Projekt 6 -->
+            <div class="portfolio-item" onclick="openLightbox('images/portfolio-6.jpg', 'Stahlkonstruktion', 'Robuste Stahlkonstruktion für Werkhallen und Lagerbauten.')">
+                <img src="images/portfolio-6.jpg" alt="Stahlkonstruktion" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Stahlkonstruktion</h4>
+                    <p>Gewerbebauten</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KONTAKT ==================== -->
+    <section id="kontakt">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="kontakt-container">
+            <div class="form-success" id="formSuccess">
+                ✓ Vielen Dank! Ihre Nachricht wurde gesendet. Ich werde Sie in Kürze kontaktieren.
+            </div>
+
+            <form id="contactForm" method="POST" action="javascript:void(0);">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="form-error" id="nameError">Bitte geben Sie Ihren Namen ein.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="form-error" id="emailError">Bitte geben Sie eine gültige E-Mail-Adresse ein.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div class="form-error" id="phoneError">Bitte überprüfen Sie Ihre Telefonnummer.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Dienstleistung *</label>
+                    <select id="service" name="service" required>
+                        <!-- BEARBEITEN: Dienstleistungs-Optionen anpassen -->
+                        <option value="">-- Bitte auswählen --</option>
+                        <option value="Metallbau">Metallbau</option>
+                        <option value="Umgebungsarbeiten">Umgebungsarbeiten (Gartenservice)</option>
+                        <option value="Seilarbeiten">Arbeiten am hängenden Seil</option>
+                        <option value="Andere">Andere Anfrage</option>
+                    </select>
+                    <div class="form-error" id="serviceError">Bitte wählen Sie eine Dienstleistung.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Nachricht *</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <div class="form-error" id="messageError">Bitte schreiben Sie eine Nachricht (mindestens 10 Zeichen).</div>
+                </div>
+
+                <div class="form-actions">
+                    <!-- BEARBEITEN: E-Mail-Adresse für Formulare -->
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Anfrage senden</button>
+                    <button type="reset" class="btn btn-secondary">Zurücksetzen</button>
+                </div>
+            </form>
+
+            <div class="contact-alternatives">
+                <p>Oder nehmen Sie direkt Kontakt auf:</p>
+                <div class="contact-buttons">
+                    <!-- BEARBEITEN: Telefonnummer -->
+                    <a href="tel:+41791234567" class="btn btn-primary">☎ Jetzt anrufen</a>
+                    <!-- BEARBEITEN: WhatsApp Link -->
+                    <a href="https://wa.me/41791234567?text=Hallo%20Silas" class="btn btn-primary">💬 WhatsApp schreiben</a>
+                    <!-- BEARBEITEN: Google Maps Link für Disentis -->
+                    <a href="https://maps.google.com/?q=Disentis,Graubünden,Schweiz" class="btn btn-secondary" target="_blank">📍 Karte anzeigen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER & IMPRESSUM ==================== -->
+    <footer id="impressum">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Kontaktinformationen</h4>
+                <!-- BEARBEITEN: Kontaktdaten -->
+                <p><strong>Silas Maissen</strong></p>
+                <p>📍 Disentis, Graubünden, Schweiz</p>
+                <p>☎ <a href="tel:+41791234567" style="color: inherit;">+41 79 123 45 67</a></p>
+                <p>📧 <a href="mailto:silas@example.com" style="color: inherit;">silas@example.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Folgen Sie mir</h4>
+                <div class="social-icons">
+                    <!-- BEARBEITEN: Social Media Links -->
+                    <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn">in</a>
+                    <a href="#" class="social-icon" aria-label="Facebook" title="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">📷</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <div class="footer-links">
+                    <a href="#impressum">Impressum</a>
+                    <a href="#datenschutz">Datenschutz</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <h4 style="margin-bottom: 1rem;">Impressum</h4>
+                <!-- BEARBEITEN: Impressum-Informationen -->
+                <p><strong>Angaben gemäß § 5 TMG / Art. 14 Bundesgesetz über den Datenschutz (DSG):</strong></p>
+                <p>
+                    Silas Maissen<br>
+                    Disentis, Graubünden, Schweiz<br>
+                    Telefon: +41 79 123 45 67<br>
+                    E-Mail: silas@example.com
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Berufshaftpflichtversicherung:</strong> [Versicherungsgesellschaft eintragen]
+                </p>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Datenschutz</h4>
+                <!-- BEARBEITEN: Datenschutzhinweis -->
+                <p>
+                    <strong>⚠ Hinweis:</strong> Diese Website verwendet <strong>keine Cookies und kein Tracking</strong>. 
+                    Wir speichern keine Nutzerdaten. Formulare werden lokal verarbeitet und das Kontaktformular 
+                    verwendet Ihr Standard-E-Mail-Programm (mailto:).
+                </p>
+                <p>
+                    Wenn Sie uns per Telefon oder E-Mail kontaktieren, speichern wir Ihre Angaben nur zur 
+                    Bearbeitung Ihrer Anfrage und dann zum Zweck der Geschäftsabwicklung, 
+                    wie in den lokalen Datenschutzgesetzen vorgesehen (z.B. DSG in der Schweiz, DSGVO in der EU).
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Externe Links:</strong> Diese Website verlinkt auf Google Maps (Disentis-Karte) 
+                    und ggf. soziale Medien. Beim Besuch dieser Links gelten die Datenschutzerklärungen 
+                    des jeweiligen Anbieters.
+                </p>
+
+                <p style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                    © 2024 Silas Maissen. Alle Rechte vorbehalten. | 
+                    <a href="https://www.github.com" style="color: inherit;">Gehostet auf GitHub Pages</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== LIGHTBOX MODAL ==================== -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" id="lightboxClose" onclick="closeLightbox()" aria-label="Lightbox schließen">&times;</button>
+        <div class="lightbox-content" onclick="event.stopPropagation();">
+            <img id="lightboxImage" src="" alt="" class="lightbox-image">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        'use strict';
+
+        // ========== HAMBURGER MENU ==========
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('show');
+            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('active'));
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('show');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ========== PARALLAX EFFECT ==========
+        const heroParallax = document.getElementById('heroParallax');
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (window.innerWidth > 768) {
+                heroParallax.style.transform = `translateY(${scrollY * 0.5}px)`;
+            }
+        });
+
+        // ========== LIGHTBOX FUNCTIONALITY ==========
+        function openLightbox(imageSrc, title, description) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDescription = document.getElementById('lightboxDescription');
+
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = title;
+            lightboxTitle.textContent = title;
+            lightboxDescription.textContent = description;
+
+            lightbox.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event && event.target.id !== 'lightbox') return;
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // ========== CONTACT FORM VALIDATION & SUBMISSION ==========
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Reset previous errors
+            document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('input, textarea, select').forEach(el => el.classList.remove('invalid'));
+            formSuccess.classList.remove('show');
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            let isValid = true;
+
+            // Validate name
+            if (!name || name.length < 2) {
+                document.getElementById('nameError').classList.add('show');
+                document.getElementById('name').classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                document.getElementById('emailError').classList.add('show');
+                document.getElementById('email').classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate service
+            if (!service) {
+                document.getElementById('serviceError').classList.add('show');
+                document.getElementById('service').classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate message
+            if (!message || message.length < 10) {
+                document.getElementById('messageError').classList.add('show');
+                document.getElementById('message').classList.add('invalid');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Build mailto link with form data
+                // BEARBEITEN: E-Mail-Adresse eintragen
+                const mailtoLink = `mailto:silas@example.com?subject=Anfrage: ${service}&body=Name: ${name}%0AE-Mail: ${email}%0ATelefon: ${phone || 'nicht angegeben'}%0ADienstleistung: ${service}%0A%0ANachricht:%0A${message}`;
+                
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                formSuccess.classList.add('show');
+                
+                // Reset form
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 1000);
+            }
+        });
+
+        // Smooth scroll on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                const element = document.querySelector(window.location.hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        // Add focus styles for keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
+    </script>
+</body>
+</html>

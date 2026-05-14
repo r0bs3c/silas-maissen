@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d4a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a5568;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+  <circle cx="200" cy="150" r="70" fill="#d4c5b9"/>
+  <ellipse cx="200" cy="260" rx="90" ry="110" fill="#b8956a" opacity="0.7"/>
+  <text x="200" y="360" font-family="Arial, sans-serif" font-size="18" fill="#d4c5b9" text-anchor="middle" font-weight="bold">
+    Porträt-Platzhalter
+  </text>
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="12" fill="#d4c5b9" text-anchor="middle">
+    Bild ersetzen: images/silas-portrait.jpg
+  </text>
+</svg>

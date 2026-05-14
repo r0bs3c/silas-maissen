@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grass" patternUnits="userSpaceOnUse" width="30" height="30">
+      <path d="M 0 30 Q 5 20 10 30 T 20 30 T 30 30" stroke="#90be6d" stroke-width="2" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="#4a5568"/>
+  <rect width="400" height="150" y="150" fill="url(#grass)"/>
+  <circle cx="100" cy="80" r="30" fill="#90be6d"/>
+  <circle cx="320" cy="100" r="25" fill="#90be6d"/>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="20" fill="#d4c5b9" text-anchor="middle" font-weight="bold">
+    Portfolio-Bild 2
+  </text>
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="12" fill="#d4c5b9" text-anchor="middle">
+    Gartensanierung
+  </text>
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="10" fill="#d4c5b9" text-anchor="middle" opacity="0.8">
+    Ersetzen Sie dieses Bild mit: images/portfolio-2.jpg
+  </text>
+</svg>
