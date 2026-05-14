@@ -162,7 +162,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 520px;
+            height: 540px;
             background-size: cover;
             background-position: center;
             transform: translateZ(0);
@@ -171,40 +171,55 @@
         
         .hero-sun {
             position: absolute;
-            top: 90px;
-            left: 16%;
-            width: 160px;
-            height: 160px;
-            background: radial-gradient(circle, rgba(255, 214, 145, 0.98) 0%, rgba(255, 214, 145, 0.0) 55%);
+            top: 82px;
+            left: 14%;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(255, 229, 176, 0.98) 0%, rgba(255, 229, 176, 0.05) 56%, transparent 80%);
             border-radius: 50%;
-            filter: blur(4px);
+            filter: blur(5px);
             z-index: 2;
             pointer-events: none;
         }
         
         .hero-cloud {
             position: absolute;
-            top: 74px;
-            left: 12%;
-            width: 240px;
-            height: 84px;
-            background: rgba(255, 255, 255, 0.75);
+            top: 70px;
+            left: 10%;
+            width: 260px;
+            height: 96px;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 120px;
-            filter: blur(0.8px);
+            filter: blur(1px);
             z-index: 3;
-            opacity: 0.96;
+            opacity: 0.98;
             pointer-events: none;
         }
         
         .hero-cloud::after {
             content: '';
             position: absolute;
-            top: -32px;
-            left: 56px;
-            width: 136px;
-            height: 72px;
-            background: rgba(255, 255, 255, 0.85);
+            top: -34px;
+            left: 58px;
+            width: 156px;
+            height: 78px;
+            background: rgba(255, 255, 255, 0.88);
             border-radius: 120px;
+        }
+        
+        .hero-cloud.secondary {
+            top: 120px;
+            left: 68%;
+            width: 180px;
+            height: 70px;
+            opacity: 0.82;
+        }
+        
+        .hero-cloud.secondary::after {
+            top: -24px;
+            left: 45px;
+            width: 104px;
+            height: 56px;
         }
         
         .hero-background svg {
@@ -215,11 +230,29 @@
         
         /* Parallax layers */
         .mountain-layer {
-            animation: floatMountains 7s ease-in-out infinite;
+            animation: floatMountains 8s ease-in-out infinite;
         }
         
         .mountain-layer.peak {
-            animation: floatPeaks 9s ease-in-out infinite;
+            animation: floatPeaks 10s ease-in-out infinite;
+        }
+        
+        @keyframes floatMountains {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+        
+        @keyframes floatPeaks {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-18px);
+            }
         }
         
         .hero-content {
@@ -230,8 +263,8 @@
             padding: 2.5rem 2rem 2rem;
             text-align: center;
             border-radius: 28px;
-            background: rgba(255, 255, 255, 0.88);
-            box-shadow: 0 24px 70px rgba(67, 56, 45, 0.12);
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 24px 70px rgba(67, 56, 45, 0.14);
             backdrop-filter: blur(5px);
         }
         
@@ -248,7 +281,7 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, #fdf4ec 0%, #f7e7d7 100%);
-            clip-path: polygon(0 40%, 10% 45%, 18% 28%, 30% 50%, 40% 32%, 54% 53%, 66% 40%, 76% 52%, 88% 34%, 95% 45%, 100% 39%, 100% 100%, 0 100%);
+            clip-path: polygon(0 40%, 10% 48%, 18% 34%, 28% 58%, 34% 40%, 44% 62%, 56% 38%, 68% 58%, 76% 42%, 86% 60%, 94% 46%, 100% 52%, 100% 100%, 0 100%);
         }
         
         #leistungen,
@@ -285,11 +318,11 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 72px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0));
-            clip-path: polygon(0 100%, 12% 46%, 24% 78%, 36% 44%, 48% 82%, 60% 50%, 72% 72%, 84% 48%, 100% 100%);
+            height: 80px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0));
+            clip-path: polygon(0 100%, 8% 48%, 18% 26%, 28% 54%, 38% 32%, 52% 58%, 64% 40%, 74% 62%, 84% 42%, 96% 58%, 100% 100%);
             pointer-events: none;
-            opacity: 0.26;
+            opacity: 0.28;
         }
         
         footer {
@@ -300,12 +333,12 @@
         footer::before {
             content: '';
             position: absolute;
-            top: -42px;
+            top: -52px;
             left: 0;
             right: 0;
-            height: 84px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 55%);
-            clip-path: polygon(0 80%, 10% 64%, 22% 76%, 33% 56%, 46% 76%, 58% 60%, 70% 78%, 82% 58%, 92% 72%, 100% 54%, 100% 100%, 0 100%);
+            height: 100px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 55%);
+            clip-path: polygon(0 78%, 12% 58%, 22% 70%, 32% 52%, 42% 74%, 54% 56%, 66% 78%, 78% 58%, 88% 70%, 100% 52%, 100% 100%, 0 100%);
             pointer-events: none;
         }
         
@@ -314,8 +347,12 @@
             z-index: 10;
             max-width: 900px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 2.5rem 2rem 2rem;
             text-align: center;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 24px 70px rgba(67, 56, 45, 0.14);
+            backdrop-filter: blur(5px);
         }
         
         .hero-content h1 {
@@ -1016,16 +1053,20 @@
                     <polygon points="820,210 920,160 980,235" fill="#ffffff" opacity="0.94" />
                 </g>
                 
-                <!-- Foreground close peaks -->
+                <!-- Foreground close peaks and ski slope -->
                 <g class="mountain-layer">
-                    <polygon points="0,520 180,260 340,430 520,300 620,520" fill="url(#frontMountain)" />
-                    <polygon points="132,305 202,188 282,312" fill="#ffffff" opacity="1" />
-                    <polygon points="400,520 560,180 700,520" fill="url(#frontMountain)" />
-                    <polygon points="520,205 560,170 615,220" fill="#ffffff" opacity="1" />
-                    <polygon points="620,520 820,140 1000,520" fill="url(#frontMountain)" />
-                    <polygon points="750,165 820,140 885,200" fill="#ffffff" opacity="1" />
-                    <polygon points="900,520 1060,220 1200,520" fill="url(#frontMountain)" />
-                    <polygon points="980,235 1060,220 1120,265" fill="#ffffff" opacity="0.95" />
+                    <polygon points="0,520 140,248 220,350 320,270 440,420 580,260 700,520" fill="url(#frontMountain)" />
+                    <polygon points="120,258 184,198 246,248 300,214 368,256 452,228 528,320 580,260 640,360 700,520" fill="rgba(255,255,255,0.92)" opacity="0.4" />
+                    <path d="M 160 260 C 190 315 230 330 280 360 C 340 400 400 415 460 440 C 520 470 580 520 700 520" stroke="#f7e5d7" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.9" />
+                    <path d="M 168 274 C 196 323 236 335 284 360 C 344 403 402 418 460 438 C 520 468 580 520 700 520" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.75" />
+                    <g transform="translate(198 300)">
+                        <circle cx="0" cy="0" r="8" fill="#3b5347" />
+                        <path d="M -5 6 L 0 24 L 6 26 L 11 6 Z" fill="#3b5347" />
+                        <path d="M -8 24 L 14 16" stroke="#3b5347" stroke-width="3" stroke-linecap="round" />
+                        <path d="M -2 26 L 18 20" stroke="#3b5347" stroke-width="3" stroke-linecap="round" />
+                        <path d="M -10 26 L 24 34" stroke="#3b5347" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+                        <path d="M -10 41 L 34 45" stroke="#3b5347" stroke-width="4" stroke-linecap="round" opacity="0.95" />
+                    </g>
                 </g>
                 
                 <!-- Soft shadow plane -->
@@ -1034,6 +1075,7 @@
         </div>
         <div class="hero-sun"></div>
         <div class="hero-cloud"></div>
+        <div class="hero-cloud secondary"></div>
         <div class="hero-content">
             <h1>
                 <!-- BEARBEITEN: Haupt-Überschrift und SEO-Keywords -->
@@ -1055,6 +1097,8 @@
     </section>
 
     <!-- ==================== LEISTUNGEN (SERVICES) ==================== -->
+    <div class="section-divider"></div>
+
     <section id="leistungen">
         <h2 class="section-title">Meine Leistungen</h2>
         <div class="services-grid">
